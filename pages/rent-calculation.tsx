@@ -116,7 +116,7 @@ function RentCalculation() {
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', fontFamily : 'Mitr , sans-serif'}}>
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', }}>
         <label htmlFor="roomType">Room Type:</label>
-        <select id="roomType" value={roomType} onChange={handleRoomTypeChange} style={{ flexGrow: 1 }}>
+        <select id="roomType" value={roomType} onChange={handleRoomTypeChange} style={{ flexGrow: 1 }} required>
           <option value="">Please select a room type</option>
           <option value="Ploy 1">Ploy 1 (1900)</option>
           <option value="Ploy 2">Ploy 2 (2100)</option>
@@ -125,43 +125,43 @@ function RentCalculation() {
       {roomType && (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', }}>
           <label htmlFor="roomNumber">Room Number:</label>
-          <input type="text" id="roomNumber" value={roomNumber} onChange={handleRoomNumberChange} style={{ flexGrow: 1 }} />
+          <input type="text" id="roomNumber" value={roomNumber} onChange={handleRoomNumberChange} style={{ flexGrow: 1 }} required />
         </div>
       )}
       {roomType && (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', }}>
           <label htmlFor="month">Month:</label>
-          <input type="text" id="month" value={month} onChange={handlemonthChange} style={{ flexGrow: 1 }} />
+          <input type="text" id="month" value={month} onChange={handlemonthChange} style={{ flexGrow: 1 }} required />
         </div>
       )}
       {roomType && (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', }}>
           <label htmlFor="oldwaterService">Last Month Water Units:</label>
-          <input type="text" id="oldwaterService" value={oldwaterService || ''} onChange={handleoldWaterServiceChange} style={{ flexGrow: 1 }} />
+          <input type="text" id="oldwaterService" value={oldwaterService || ''} onChange={handleoldWaterServiceChange} style={{ flexGrow: 1 }} required />
         </div>
       )}
       {roomType && (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', }}>
           <label htmlFor="waterService">This Month Water Units:</label>
-          <input type="text" id="waterService" value={waterService || ''} onChange={handleWaterServiceChange} style={{ flexGrow: 1 }} />
+          <input type="text" id="waterService" value={waterService || ''} onChange={handleWaterServiceChange} style={{ flexGrow: 1 }} required/>
         </div>
       )}
       {roomType && (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', }}>
           <label htmlFor="oldelectricService">Last Month Electric Units:</label>
-          <input type="text" id="oldelectricService" value={oldelectricService || ''} onChange={handleoldElectricServiceChange} style={{ flexGrow: 1 }} />
+          <input type="text" id="oldelectricService" value={oldelectricService || ''} onChange={handleoldElectricServiceChange} style={{ flexGrow: 1 }} required/>
         </div>
       )}
       {roomType && (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', }}>
           <label htmlFor="electricService">This Month Electric Units:</label>
-          <input type="text" id="electricService" value={electricService || ''} onChange={handleElectricServiceChange} style={{ flexGrow: 1 }} />
+          <input type="text" id="electricService" value={electricService || ''} onChange={handleElectricServiceChange} style={{ flexGrow: 1 }} required/>
         </div>
       )}
       {roomType && (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', }}>
           <label htmlFor="parkingFee">Parking Fee:</label>
-          <input type="text" id="parkingFee" value={parkingFee || ''} onChange={handleParkingFeeChange} style={{ flexGrow: 1 }} />
+          <input type="text" id="parkingFee" value={parkingFee || ''} onChange={handleParkingFeeChange} style={{ flexGrow: 1 }} required/>
         </div>
       )}
       {roomType && (
