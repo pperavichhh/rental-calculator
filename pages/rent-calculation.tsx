@@ -61,6 +61,12 @@ function RentCalculation() {
   const total = ployRate + (delta_water_unit*30) + (delta_electric_unit*8) + parkingFee;
 
   const handleDownload = () => {
+
+    // Check for empty data arrays and inputs
+    if (!electricService || !waterService || !roomNumber || !ployRate) {
+      alert('Please enter all required data!');
+    return;
+    }
     const bill = document.createElement('canvas');
     bill.width = 600;
     bill.height = 400;
