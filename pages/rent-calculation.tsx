@@ -4,6 +4,7 @@ import React, { useEffect } from 'react'
 import html2canvas from 'html2canvas';
 import { saveAs } from 'file-saver';
 import path from 'path';
+import axios from 'axios';
 
 function RentCalculation() {
     useEffect(() => {
@@ -171,6 +172,6 @@ function RentCalculation() {
       <button onClick={handleDownload}>Download</button>
     </div>
   );
-}
+} 
 
 export default RentCalculation;
